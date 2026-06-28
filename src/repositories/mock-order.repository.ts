@@ -35,8 +35,13 @@ export class MockOrderRepository implements IOrderRepository {
   async findByUserId(userId: string): Promise<Order[]> {
     return this.orders.filter((o) => o.userId === userId);
   }
-
+ 
+  async findAll(): Promise<Order[]> {
+    return this.orders;
+  }
+ 
   async updateStatus(
+
     id: string,
     status: Order['status'],
   ): Promise<Order | null> {

@@ -596,4 +596,41 @@ export class MockProductRepository implements IProductRepository {
         p.description.toLowerCase().includes(query.toLowerCase()),
     );
   }
+ 
+  async create(product: Partial<Product>): Promise<Product> {
+    const newProduct: Product = {
+      id: Math.random().toString(36).substr(2, 9),
+      sku: product.sku || `PROD-${Math.random().toString(36).substr(2, 5).toUpperCase()}`,
+      name: product.name || 'New Product',
+      description: product.description || '',
+      category: product.category || 'Collars',
+      basePrice: product.basePrice || 0,
+      images: product.images || [],
+      isSale: product.isSale || false,
+      salePrice: product.salePrice || 0,
+      isNew: product.isNew || false,
+      features: product.features || [],
+      variations: product.variations || [],
+      material: product.material || '',
+      countryOfOrigin: product.countryOfOrigin || '',
+      sizeChart: product.sizeChart || '',
+      additionalInfo: product.additionalInfo || '',
+    };
+    this.products.push(newProduct);
+    return newProduct;
+  }
+ 
+  async update(id: string, product: Partial<Product>): Promise<Product | null> {
+    const index = this.products.findIndex((p) => p.id === id);
+    if (index === -1) return null;
+    this.products[index] = { ...this.products[index], ...product };
+    return this.products[index];
+  }
+ 
+  async delete(id: string): Promise<boolean> {
+    const index = this.products.findIndex((p) => p.id === id);
+    if (index === -1) return false;
+    this.products.splice(index, 1);
+    return true;
+  }
 }

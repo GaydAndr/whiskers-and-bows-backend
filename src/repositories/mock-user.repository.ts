@@ -36,8 +36,13 @@ export class MockUserRepository implements IUserRepository {
   async findByEmail(email: string): Promise<User | null> {
     return this.users.find((u) => u.email === email) || null;
   }
-
+ 
+  async findByToken(token: string): Promise<User | null> {
+    return null; // Mock implementation: token search not implemented
+  }
+ 
   async create(user: Partial<User>): Promise<User> {
+
     const newUser: User = {
       id: Math.random().toString(36).substr(2, 9),
       firstName: user.firstName || '',
