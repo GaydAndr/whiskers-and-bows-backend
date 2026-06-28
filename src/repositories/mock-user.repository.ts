@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { IUserRepository } from './user.repository';
-import { User } from '@whiskers-bows/shared';
+import { User } from '../shared/types';
 
 @Injectable()
 export class MockUserRepository implements IUserRepository {

@@ -1,4 +1,4 @@
-import { User } from '@whiskers-bows/shared';
+import { User } from './shared/types';
 
 export interface IUserRepository {
   findById(id: string): Promise<User | null>;

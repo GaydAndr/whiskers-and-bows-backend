@@ -1,6 +1,6 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
-import { Order, OrderItem } from '@whiskers-bows/shared';
+import { Order, OrderItem } from '../shared/types';
 
 @Schema({ timestamps: true })
 export class OrderDocument extends Document implements Order {

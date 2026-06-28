@@ -1,6 +1,6 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
-import type { Product, ProductVariation, CategoryName } from '@whiskers-bows/shared';
+import type { Product, ProductVariation, CategoryName } from '../shared/types';
 
 @Schema({ timestamps: true })
 export class ProductDocument extends Document implements Product {

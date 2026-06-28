@@ -1,6 +1,6 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
-import { User } from '@whiskers-bows/shared';
+import { User } from '../shared/types';
 
 @Schema({ timestamps: true })
 export class UserDocument extends Document implements User {

@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { IProductRepository } from './product.repository';
-import { Product, CategoryName } from '@whiskers-bows/shared';
+import { Product, CategoryName } from '../shared/types';
 
 @Injectable()
 export class MockProductRepository implements IProductRepository {

@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { IProductRepository } from './product.repository';
-import { Product, CategoryName } from '@whiskers-bows/shared';
+import { Product, CategoryName } from '../shared/types';
 import { ProductDocument } from '../schemas/product.schema';
 
 @Injectable()

@@ -1,4 +1,4 @@
-import { Order } from '@whiskers-bows/shared';
+import { Order } from './shared/types';
 
 export interface IOrderRepository {
   create(order: Partial<Order>): Promise<Order>;

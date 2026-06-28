@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { Resend } from 'resend';
-import { Order } from '@whiskers-bows/shared';
+import { Order } from '../shared/types';
 
 @Injectable()
 export class EmailService {

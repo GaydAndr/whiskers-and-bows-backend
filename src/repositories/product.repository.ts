@@ -1,4 +1,4 @@
-import { Product, CategoryName } from '@whiskers-bows/shared';
+import { Product, CategoryName } from './shared/types';
 
 export interface IProductRepository {
   findAll(): Promise<Product[]>;

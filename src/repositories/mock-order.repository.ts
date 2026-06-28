@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { IOrderRepository } from './order.repository';
-import { Order } from '@whiskers-bows/shared';
+import { Order } from '../shared/types';
 
 @Injectable()
 export class MockOrderRepository implements IOrderRepository {

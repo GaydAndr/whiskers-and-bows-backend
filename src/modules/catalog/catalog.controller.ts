@@ -1,6 +1,6 @@
 import { Controller, Post, Body, Get, Query, Patch, Param, Delete } from '@nestjs/common';
 import { CatalogService } from './catalog.service';
-import type { CategoryName } from '@whiskers-bows/shared';
+import type { CategoryName } from '../shared/types';
 
 @Controller('products')
 export class CatalogController {
