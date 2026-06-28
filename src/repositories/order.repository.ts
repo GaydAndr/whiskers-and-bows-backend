@@ -1,4 +1,4 @@
-import { Order } from './shared/types';
+import { Order } from '../shared/types';
 
 export interface IOrderRepository {
   create(order: Partial<Order>): Promise<Order>;

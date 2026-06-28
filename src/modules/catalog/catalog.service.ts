@@ -1,6 +1,6 @@
 import { Injectable, Inject } from '@nestjs/common';
 import type { IProductRepository } from '../../repositories/product.repository';
-import type { Product, CategoryName } from '../shared/types';
+import type { Product, CategoryName } from '../../shared/types';
 
 @Injectable()
 export class CatalogService {

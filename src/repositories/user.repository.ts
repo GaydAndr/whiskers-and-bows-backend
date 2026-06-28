@@ -1,4 +1,4 @@
-import { User } from './shared/types';
+import { User } from '../shared/types';
 
 export interface IUserRepository {
   findById(id: string): Promise<User | null>;

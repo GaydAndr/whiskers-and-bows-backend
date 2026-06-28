@@ -1,4 +1,4 @@
-import { Product, CategoryName } from './shared/types';
+import { Product, CategoryName } from '../shared/types';
 
 export interface IProductRepository {
   findAll(): Promise<Product[]>;

@@ -1,6 +1,6 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { MongoOrderRepository } from '../../repositories/mongo-order.repository';
-import { Order } from '../shared/types';
+import { Order } from '../../shared/types';
 import { CartService } from '../cart/cart.service';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';

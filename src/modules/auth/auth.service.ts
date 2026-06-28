@@ -1,6 +1,6 @@
 import { Injectable, UnauthorizedException, NotFoundException } from '@nestjs/common';
 import { MongoUserRepository } from '../../repositories/mongo-user.repository';
-import { User } from '../shared/types';
+import { User } from '../../shared/types';
 import { EmailService } from '../email/email.service';
 import * as crypto from 'crypto';
 
